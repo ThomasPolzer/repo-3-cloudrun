@@ -9,7 +9,7 @@ steps:
 
 # Step 3: Deploy to Cloud Run (cloud-sdk image, um im Image gcloud-Befehle aufzurufen)
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'bash'
+  entrypoint: gcloud
   args: ['run', 'deploy', 'myfirstrun', '--image', 'us-central1-docker.pkg.dev/${PROJECT_ID}/demo-repo-03/cicdcloudrunnodeimage', '--region', 'us-central-1', '--allow-unauthenticated']
 
 images:
